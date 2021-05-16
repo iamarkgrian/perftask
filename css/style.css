@@ -260,3 +260,25 @@ body {
     flex-direction: column;
   }
 }
+
+@media (min-width: 339px) {
+  .hero,
+  .hero header {
+    padding: 30px;
+  }
+
+  .text h1 {
+    font-size: 2em;
+  }
+
+  .text h2 {
+    font-size: 1.5em;
+  }
+
+  .menu .toggle-close {
+    position: absolute;
+    top: 20px;
+    right: 44%;
+    z-index: 10;
+  }
+}
