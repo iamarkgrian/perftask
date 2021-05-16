@@ -261,7 +261,7 @@ body {
   }
 }
 
-@media (min-width: 339px) {
+@media (min-width: 375px) {
   .hero,
   .hero header {
     padding: 30px;
