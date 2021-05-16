@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.3;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+.hero {
+  position: absolute;
+  background-color: lightblue;
+  right: 0;
+  width: 100%;
+  display: flex;
+  padding: 100px;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+.hero.active {
+  right: 100%;
+}
+
+.hero header {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.hero header a {
+  font-size: 34px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.hero header .logo img {
+  width: 90px;
+}
+
+.toggle {
+  background: url(../images/menu.png);
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: invert(1);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  background-color: darkslategray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+  color: #f0f0f0;
+}
+
+.text h1 {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.text h2 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text a {
+  position: absolute;
+  background: #f0f0f0;
+  color: #000;
+  font-size: 22px;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.social {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  transform: scale(0.5);
+  filter: invert(1);
+  transition: 0.5s;
+}
+
+.social li:first-child a {
+  transform: scale(0.6);
+}
+.social img {
+  width: 60px;
+  background-size: 30px;
+}
+
+.social li a:hover {
+  transform: scale(0.6) translateY(-15px);
+}
+
+.social li:first-child a:hover {
+  transform: scale(0.7) translateY(-15px);
+}
+
+.toggle-close {
+  position: absolute;
+  background: url(../images/close.png);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu img {
+  position: relative;
+  width: 350px;
+  height: 205px;
+  margin: 20px;
+  opacity: 1;
+  box-shadow: 0px 5px 15px gray;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu .container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  top: 50px;
+  left: 10px;
+}
+
+.menu .toggle-close {
+  position: absolute;
+  top: 70px;
+  right: 95px;
+  z-index: 2;
+}
+
+.menu .work1,
+.work2,
+.work3,
+.work4,
+.work5,
+.work6 {
+  position: relative;
+}
+
+.menu .text.middle {
+  background: rgba(255, 255, 255, 0.2);
+  width: 350px;
+  height: 205px;
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu .text.middle a {
+  font-size: 15px;
+  font-weight: 500;
+}
+.menu .text.middle:hover {
+  opacity: 1;
+}
+
+.menu .text.middle a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 798px) {
+  .hero,
+  .hero header {
+    padding: 40px;
+  }
+
+  .text h1 {
+    font-size: 2.5em;
+  }
+  .text h2 {
+    font-size: 2em;
+  }
+
+  .menu .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
