@@ -261,7 +261,7 @@ body {
   }
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .hero,
   .hero header {
     padding: 30px;
@@ -281,4 +281,4 @@ body {
     right: 44%;
     z-index: 10;
   }
-}
+} */
