@@ -160,16 +160,6 @@ body {
   transform: scale(0.7) translateY(-15px);
 }
 
-.toggle-close {
-  position: absolute;
-  background: url(../images/close.png);
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  cursor: pointer;
-}
 
 .menu img {
   position: relative;
@@ -205,6 +195,13 @@ body {
   top: 70px;
   right: 95px;
   z-index: 2;
+  background: url(../images/close.png);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
 }
 
 .menu .work1,
