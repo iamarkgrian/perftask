@@ -1,0 +1,616 @@
+/* to import some fonts so that I can use the font from the font sites. */
+
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+@import url("http://fonts.cdnfonts.com/css/lovelo");
+
+/* Default format for html */
+
+/* html element selector to select the html with a font-size of 100% and box-sizing of border-box */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* universal selector before and after to select all the elements with a box-sizing of inherit */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+/* body padding and margin is rest to 0 with a line height of 1.3, the default font is Open Sans from the font site with a background color */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Open Sans", sans-serif;
+  background-color: #d6eaf8;
+  overflow: hidden;
+}
+
+/* My header style */
+
+/* header is fixed position so i can easily navigate the page with the use of navigation bar, reset to 0 with the width of 100% */
+#header {
+  background-color: #1b4f72;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+/* logo-container class selector is displayed in flex to adjust the position to the right, and the items are aligned in center with a padding of 15px plus 40px to the left*/
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* img in logo-container has a width of 100px, Position is what the content is positioned inside the document, Absolute is positioned at first */
+.logo-container img {
+  width: 100px;
+  position: absolute;
+  top: -83%;
+  left: -25%;
+}
+
+/* all anchor tag in logo-container is in Lovelo font w/ font weight of 900 and its size is 30px, padding 20px from left, color - #f0f0f0, positioned on top at 38% and left at 10%*/
+.logo-container a {
+  position: absolute;
+  top: 38%;
+  left: 10%;
+  padding-left: 20px;
+  font-family: "Lovelo", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: #f0f0f0;
+}
+
+/* navbar class selector is displayed in flex, I justify the content that has space in between to separate the content*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* navlists class is selected to specify ul element with a padding of 10px and to the right about 20px */
+.nav-lists ul {
+  padding-right: 20px;
+  padding: 10px;
+}
+
+/* navlists class selected to specify the ul li, the list style is none and displayed as inline-block or positioned from left to right with a padding of 35px to look more thick */
+.nav-lists ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 35px;
+}
+
+/* anchor in navlist class is selected and transform into uppercase and the color is #f0f0f0 */
+.nav-lists ul li a {
+  color: #f0f0f0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+/* animation effect when hovered or mouse over */
+.nav-lists ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+/* Homepage */
+/* home id has 3 division, profile-1, profile-2, and profile-3 class, home id is positioned is absolute and positioned top for about 150px, z-index is use to wrap the content behind and displayed to flex in row, color of the font is #1c2833 */
+#home {
+  position: relative;
+  top: 150px;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  color: #1c2833;
+}
+
+/* inside the home id, the profile-1 class is selected to have a padding of 90px, and margin-top at -90px, the reason is to position the class beyond the original position of top margin */
+#home .profile-1 {
+  margin: 25px 70px;
+}
+
+/* inside the profile-1 class, h1 is selected to modify the size, line-height is set to 0 value to reset the height of line in h1, margin bottom is 55px, the font weight is 400 to look thinner and transform the text in uppercase  */
+#home .profile-1 h1 {
+  font-size: 75px;
+  line-height: 0;
+  margin-bottom: 55px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* h3 is seleted in profile-1, the size is 21px, padding-left is 5px line height is same as h1, margin bottom is position negatively 5px, font weight is 400 and the text is transformed at uppercase */
+#home .profile-1 h3 {
+  font-size: 21px;
+  padding-left: 5px;
+  line-height: 0;
+  margin-bottom: -5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* h2 is seleted in profile-1, the size is 26px, padding-left is 5px line height is same as h2, font weight is 400 and the text is transformed at uppercase */
+#home .profile-1 h2 {
+  font-size: 26px;
+  padding-left: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* img is selected inside the profile-1 class, width is 200px, it has a border radius of 50% to make it round shape, margin on the top at 20px, the border has 5px thick in solid style and the color of the border is  #641e16 */
+#home .profile-1 img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 5px solid #641e16;
+}
+
+/* inside the home id, the profile-2 class is selected to set the margin-top at 5% and margin-left at 60px */
+#home .profile-2 {
+  margin-top: 5%;
+  margin-left: 60px;
+}
+
+/* inside profile-2 class, it has 3 class, pc coffe and ellipse class, the reason is I will combine them to create a one image, also you can adjust separately */
+/* class pc has a width of 280px */
+#home .profile-2 .pc {
+  width: 280px;
+}
+/* class coffee is float or placed to the left side of the container, margin-top at 24% and margin-right at 20px */
+#home .profile-2 .coffee {
+  width: 100px;
+  float: left;
+  margin-top: 24%;
+  margin-right: 20px;
+}
+
+/* class ellipse is positioned absolute to easily position the image, positioned top at 25% and positioned left at 32% of the container, with a width of 550px, and z-index of -1 to bring the image behind */
+#home .profile-2 .ellipse {
+  position: absolute;
+  width: 550px;
+  top: 23%;
+  left: 29%;
+  z-index: -1;
+}
+
+/* profile-2 class has a paragraph to select, it is transform to uppercase, the font size is 25px, width at 319px, aligned center the margin-top is 50px and margin-left is 26% */
+#home .profile-2 p {
+  text-transform: uppercase;
+  font-size: 25px;
+  width: 319px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 26%;
+}
+
+/* img element is selected inside the .profile-3 class, positioning absolute with the width of 220px positioned left at 75% and the topside at 10% */
+#home .profile-3 img {
+  position: absolute;
+  width: 220px;
+  left: 75%;
+  top: 10%;
+}
+
+/* school id were position in relative, z -index is -1, with a width of 100% the reason is to set the width in maximum all the way, set the margin-top to 20% to put it all the way down. and the height is 270vh or the viewport height*/
+#school {
+  padding-top: 100px;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 270vh;
+  background-color: #f0f0f0;
+  margin-top: 20%;
+}
+
+/* heading class name is set the display to flex, to display the content direction in row, aligned the items to center and has a padding of 10px by 70px */
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 70px;
+}
+
+/* image inside the heading class, width is 180px, margin is 50px */
+.heading img {
+  width: 180px;
+  margin: 50px;
+}
+
+/* h2 inside the heading class, font size is 33px and transform into uppercase, width is 320px and padding top is 70px */
+.heading h2 {
+  padding-top: 70px;
+  font-size: 33px;
+  width: 320px;
+  text-transform: uppercase;
+}
+
+/* inside the school id name and content class, the table element is selected by its name, padding top is 30 px, margin is 0 auto to make the content in center, top and bottom is 0, left and right is set to automatically adjusting the content */
+#school .content table.table {
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+/* inside the table has an img, width is 170px */
+#school .content table.table .img-icon {
+  width: 170px;
+}
+
+/* the list inside the table is set the list style into none, to remove the default value (disk), padding right is 50px */
+#school .content table.table ul li {
+  list-style: none;
+  padding-right: 50px;
+}
+
+/* inside the table is divided into 2, col1 id and col2 id */
+/* font size of col1 id is 19px, font weight is 500 to look thicker */
+#school .content table.table ul #col1 {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* font size inside the col2 id is 17px, padding left 10px to adjust to the left */
+#school .content table.table ul #col2 {
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+/* the td element has a padding of 50px, to make it wider */
+#school .content table.table td {
+  padding: 50px;
+}
+
+/* job id is position relative, with a 100% width, the viewport height is 270 */
+#job {
+  background: #1e8449;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+/* inside #job, the class workh is display by flex in row, aligned the items from the center and float to right or move to the right, padding 60px plus padding right 150px */
+#job .workh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: right;
+  padding: 60px;
+  padding-right: 150px;
+}
+
+/* image inside the .workh is 295px */
+#job .workh img {
+  width: 295px;
+}
+
+/* h2 inside the .workh has a font size of 33px, padding 60px, and transform into uppercase */
+#job .workh h2 {
+  font-size: 33px;
+  padding: 60px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+/* the table from the class content is move to the left, padding top/bottom is 0px, paddong left/right is 140px */
+#job .content table.table {
+  float: left;
+  padding: 0px 140px;
+  padding-bottom: 50px;
+}
+
+/* the img inside the table is 190px width */
+#job .content table.table img {
+  width: 190px;
+}
+
+/* I used list-style and set to none, to remove disk bullet */
+#job .content table.table ul {
+  list-style: none;
+}
+
+/* the text color is #f0f0f0 */
+#job .content table.table ul li {
+  color: #f0f0f0;
+}
+
+/* col1 class has a font size of 30px, fon weight is 500 to look thicker */
+#job .content table.table ul #col1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* col2 class is smaller text than col1 class  */
+#job .content table.table ul #col2 {
+  font-size: 25px;
+}
+
+/* hobbies id is positioned relative, height is 130 viewport height, width is 100%, z-index is -1 to move the content behind the header element */
+#hobbies {
+  background: white;
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  z-index: -1;
+  padding-top: 100px;
+}
+
+/* heading class inside the #hobbies displayed in flex in column with a padding on top 50px */
+#hobbies .heading {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+/* h1 inside the heading class is 33px font size */
+#hobbies .heading h1 {
+  font-size: 33px;
+  text-transform: uppercase;
+}
+
+/* img inside heading class is 280px width */
+#hobbies .heading img {
+  width: 280px;
+}
+
+/* content class is displayed as flex in row */
+#hobbies .content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* h2 inside the content class, the heading is transform to uppercase with a size of 21px */
+#hobbies .content h2 {
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+/* Group selector selects the 3 division called col1, col2 and col3, witdh is 400px wide, margin is 0 auto to center the content, padding top/bottom is 40px padding left/right is 50px*/
+#hobbies .content .col1,
+.col2,
+.col3 {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px 50px;
+}
+
+/* .col1 margin right is set to zero value to remove the margin to the right */
+#hobbies .content .col1 {
+  margin-right: 0px;
+}
+
+/* .col2 margin left/right is set to zero value to remove the margins left and right, top margin is -20px to move upward to align the heading */
+#hobbies .content .col2 {
+  margin-top: -20px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/* .col3 margin left is set to zero value to remove the margin from left side  */
+#hobbies .content .col3 {
+  margin-left: 0px;
+}
+
+/* interests id is positioned in relative, I use z-index and set it to -1 to move the content behind, width is 100%, padding top is 70px, viewport height is 120*/
+#interests {
+  background: #1b2631;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 120vh;
+  color: #f0f0f0;
+  padding-top: 140px;
+}
+/* the heading is displayed as flex in column */
+#interests .heading {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 100px;
+}
+
+/* h1 is in uppercase with 33px size */
+#interests .heading h1 {
+  font-size: 33px;
+  text-transform: uppercase;
+}
+
+/* the image is 318px wide and has a margin top of 0 to remove a margin on the top, I use margin-left in negative vale to position my image */
+#interests .heading img {
+  width: 318px;
+  margin-top: 0;
+  margin-left: -80px;
+}
+
+/* content is displayed as flex in row */
+#interests .content {
+  display: flex;
+  flex-direction: row;
+  padding: 100px;
+  margin-top: -130px;
+}
+
+/* I use flex to make the 2 division equally divided and adjust its padding */
+#interests .content .col1 {
+  flex: 2;
+  padding: 40px 20px 0px 190px;
+}
+/* I use flex to make the 2 division equally divided and adjust its padding */
+#interests .content .col2 {
+  flex: 2;
+  padding: 40px 190px 0px 20px;
+}
+
+/* footer is positioned relative with a widt of 100%*/
+#footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #1b4f72;
+}
+
+/* the footer's container is displayed by flex in row */
+#footer .container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* Image in footer-col1 has padding of 50px top/bottom and 100px left/right */
+#footer .container .footer-col1 img {
+  margin-top: 120px;
+  padding: 40px 100px;
+}
+
+/* this is positioned relative plus margin top 5% */
+#footer .container .footer-col2 {
+  color: #1c2833;
+  position: relative;
+  margin-top: 12%;
+}
+
+/* the text has a font style 'Coming soon' with a size of 30px */
+#footer .container .footer-col2 p {
+  font-family: "Coming Soon", cursive;
+  font-size: 30px;
+  color: #f0f0f0;
+}
+
+/* this is a social media button */
+.social-media .button {
+  display: inline-block;
+  width: 61px;
+  height: 61px;
+  /* overflow will hide the text outside the button class */
+  overflow: hidden;
+  margin: 0 5px;
+  background: #f0f0f0;
+  border-radius: 50px;
+  border: 1px solid #f0f0f0;
+  /* when the button is pointed, the cursor will change to pointer */
+  cursor: pointer;
+  /* box shadow is used to have a shadow */
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  /* transition is used to change the hovering more smoothly with a duration time */
+  transition: all 0.3s ease-out;
+}
+
+/* this is for Facebook, I use the nth-child to select an specific content inside the button class with my background color and hover is when you mouse over the content*/
+.social-media .button:nth-child(1):hover .icon {
+  background: #4267b2;
+}
+/* for Twitter */
+.social-media .button:nth-child(2):hover .icon {
+  background: #1da1f2;
+}
+/* for Instagram */
+.social-media .button:nth-child(3):hover .icon {
+  background: #e1306c;
+}
+/* for YouTube */
+.social-media .button:nth-child(4):hover .icon {
+  background: #ff0000;
+}
+
+/* when the button class is hovered or in mouse over, the width will change to 200px */
+.social-media .button:hover {
+  width: 200px;
+}
+
+/* this is an icon inside the button class */
+.social-media .button .icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 20px;
+  transition: all 0.1s ease-out;
+}
+
+/* Icons that come from Font Awesome, with a font-size of 26px, and the line height is 60px */
+.social-media .button .icon i {
+  font-size: 26px;
+  line-height: 60px;
+}
+
+/* color of the icon */
+.social-media .button:hover .icon i {
+  color: #f0f0f0;
+}
+
+/* name of an Icon */
+/* I use transition to change all the property into a smooth effect, the duration is .1s and the effect is ease-out */
+.social-media .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.1s ease-out;
+}
+
+/* If hovers, it will display the platform name and username */
+.social-media .button span:hover {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 10px;
+  position: absolute;
+  top: 212px;
+}
+
+/* text color and font style of anchor links */
+.social-media .button a {
+  color: #1c2833;
+  font-family: "Antonio", sans-serif;
+}
+
+/* positioned in absolute so that it can easily position the button, the appearnce has a box shadow to make the button look nice, I use transition to make a smooth effect, and hovering the cursor will become a pointer*/
+.previous-task {
+  position: absolute;
+  bottom: 25%;
+  left: 43%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+/* When hovered, the bottom position will decrease by 1% */
+.previous-task:hover {
+  letter-spacing: 4px;
+}
+
+/* This is the base style of the button */
+.previous-task span {
+  width: 300px;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 50px;
+}
+
+/* text style of the anchor link */
+.previous-task a {
+  color: #1c2833;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container {
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  width: 13px;
+  background-color: #f0f0f0;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #1c2833;
+  border: 3px solid #f0f0f0;
+}
