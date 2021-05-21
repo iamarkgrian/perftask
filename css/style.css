@@ -280,10 +280,19 @@ body {
 
 @keyframes slideFromBottom {
   from {
-    transform: translateY(100%);
+    transform: translateY(150%);
   }
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
