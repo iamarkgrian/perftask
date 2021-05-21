@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  animation: slideFromTop 1s ease-in;
 }
 
 .hero header .logo {
@@ -92,6 +93,7 @@ body {
   position: relative;
   z-index: 10;
   color: #f0f0f0;
+  animation: slideFromLeft 1s ease-in;
 }
 
 .text h1 {
@@ -130,6 +132,7 @@ body {
   justify-content: center;
   align-items: center;
   bottom: 20px;
+  animation: slideFromBottom 1s ease-in;
 }
 
 .social li {
@@ -254,6 +257,33 @@ body {
   .menu .container {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 
